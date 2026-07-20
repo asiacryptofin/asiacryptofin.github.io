@@ -45,7 +45,7 @@
   if (mailto) {
     const subject = encodeURIComponent('AsiaCryptoFin 2026 Talk Proposal');
     const body = encodeURIComponent(proposalTemplate);
-    mailto.href = `mailto:joseph.liu@monash.edu?cc=john.yuen@monash.edu&subject=${subject}&body=${body}`;
+    mailto.href = `mailto:joseph.liu@monash.edu?cc=John.TszHonYuen@monash.edu&subject=${subject}&body=${body}`;
   }
 
   const copyButton = document.querySelector('[data-copy-template]');
