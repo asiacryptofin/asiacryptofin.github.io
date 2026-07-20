@@ -32,7 +32,7 @@ The parent ASIACRYPT dates are shown as 7-11 December 2026 in Hong Kong. The for
 The submission button opens an email addressed to:
 
 - joseph.liu@monash.edu
-- cc: john.yuen@monash.edu
+- cc: John.TszHonYuen@monash.edu
 
 The site also provides a copyable and downloadable plain-text talk-proposal template.
 
