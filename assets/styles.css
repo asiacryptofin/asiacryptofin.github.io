@@ -92,17 +92,17 @@ h3 { font-size: 1.35rem; }
 .hero-meta strong { margin: 8px 0 2px; font-size: .92rem; }
 .hero-meta small { color: rgba(255,255,255,.55); font-size: .76rem; line-height: 1.4; }
 .meta-icon { color: var(--teal); font-size: 1.2rem; }
-.hero-columns { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; margin-top: 10px; }
+.hero-columns { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: stretch; margin-top: 10px; }
 .hero-main { display: grid; gap: 34px; align-content: start; }
 .hero-video { overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 22px; background: #000; box-shadow: 0 45px 90px rgba(0,0,0,.35); }
 .hero-video video { display: block; width: 100%; height: auto; }
-.hero-visual { position: relative; }
-.visual-card { position: relative; padding: 20px; border: 1px solid rgba(255,255,255,.15); border-radius: 26px; background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025)); box-shadow: 0 45px 90px rgba(0,0,0,.35); backdrop-filter: blur(16px); transform: perspective(1000px) rotateY(-5deg) rotateX(2deg); }
+.hero-visual { position: relative; display: flex; }
+.visual-card { position: relative; display: flex; flex-direction: column; width: 100%; padding: 20px; border: 1px solid rgba(255,255,255,.15); border-radius: 26px; background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025)); box-shadow: 0 45px 90px rgba(0,0,0,.35); backdrop-filter: blur(16px); transform: perspective(1000px) rotateY(-5deg) rotateX(2deg); }
 .visual-card::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(89,228,206,.12); border-radius: 18px; pointer-events: none; }
 .visual-topline, .visual-footer { position: relative; z-index: 1; display: flex; justify-content: space-between; color: rgba(255,255,255,.55); font-size: .66rem; font-weight: 900; letter-spacing: .17em; }
 .visual-footer { justify-content: center; gap: 12px; padding-bottom: 6px; }
 .live-dot { color: var(--gold); }
-.visual-card svg { width: 100%; }
+.visual-card svg { width: 100%; flex: 1 1 auto; min-height: 0; }
 .network-nodes circle { fill: var(--navy-900); stroke: var(--teal); stroke-width: 2; }
 .network-nodes .core-node { fill: rgba(244,200,104,.12); stroke: var(--gold); }
 .node-labels text { fill: rgba(255,255,255,.7); font-size: 12px; font-weight: 800; letter-spacing: 1px; }
