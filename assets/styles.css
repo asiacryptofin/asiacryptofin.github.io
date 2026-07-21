@@ -76,11 +76,11 @@ button { cursor: pointer; }
 .hero-orb { position: absolute; border-radius: 50%; filter: blur(4px); pointer-events: none; }
 .hero-orb-one { width: 390px; height: 390px; right: -90px; top: 95px; background: radial-gradient(circle, rgba(89,228,206,.23), rgba(89,228,206,0) 70%); }
 .hero-orb-two { width: 470px; height: 470px; left: 28%; bottom: -270px; background: radial-gradient(circle, rgba(244,200,104,.13), rgba(244,200,104,0) 70%); }
-.hero-inner { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 72px; }
+.hero-inner { position: relative; }
 .eyebrow { margin: 0 0 19px; color: var(--teal); font-size: .77rem; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow-dark { color: var(--teal-dark); }
 h1, h2, h3, h4 { margin-top: 0; line-height: 1.12; letter-spacing: -.035em; }
-h1 { max-width: 770px; margin-bottom: 25px; font-size: clamp(3rem, 5.25vw, 5.2rem); font-weight: 800; }
+h1 { margin-bottom: 25px; font-size: clamp(2.4rem, 4.3vw, 3.8rem); font-weight: 800; }
 h1 span { color: var(--gold); }
 h2 { margin-bottom: 23px; font-size: clamp(2.15rem, 3.65vw, 3.55rem); font-weight: 790; }
 h3 { font-size: 1.35rem; }
@@ -92,17 +92,9 @@ h3 { font-size: 1.35rem; }
 .hero-meta strong { margin: 8px 0 2px; font-size: .92rem; }
 .hero-meta small { color: rgba(255,255,255,.55); font-size: .76rem; line-height: 1.4; }
 .meta-icon { color: var(--teal); font-size: 1.2rem; }
-.hero-visual { position: relative; }
-.visual-card { position: relative; padding: 20px; border: 1px solid rgba(255,255,255,.15); border-radius: 26px; background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025)); box-shadow: 0 45px 90px rgba(0,0,0,.35); backdrop-filter: blur(16px); transform: perspective(1000px) rotateY(-5deg) rotateX(2deg); }
-.visual-card::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(89,228,206,.12); border-radius: 18px; pointer-events: none; }
-.visual-topline, .visual-footer { position: relative; z-index: 1; display: flex; justify-content: space-between; color: rgba(255,255,255,.55); font-size: .66rem; font-weight: 900; letter-spacing: .17em; }
-.visual-footer { justify-content: center; gap: 12px; padding-bottom: 6px; }
-.live-dot { color: var(--gold); }
-.visual-card svg { width: 100%; }
-.network-nodes circle { fill: var(--navy-900); stroke: var(--teal); stroke-width: 2; }
-.network-nodes .core-node { fill: rgba(244,200,104,.12); stroke: var(--gold); }
-.node-labels text { fill: rgba(255,255,255,.7); font-size: 12px; font-weight: 800; letter-spacing: 1px; }
-.node-labels .core-label { fill: var(--gold); font-size: 11px; }
+.hero-columns { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: start; margin-top: 10px; }
+.hero-video { overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 22px; background: #000; box-shadow: 0 45px 90px rgba(0,0,0,.35); }
+.hero-video video { display: block; width: 100%; height: auto; }
 
 .section { padding: 115px 0; }
 .section-light { background: var(--paper); }
@@ -192,7 +184,7 @@ h3 { font-size: 1.35rem; }
 @media (max-width: 1040px) {
   .primary-nav { gap: 17px; }
   .primary-nav a { font-size: .84rem; }
-  .hero-inner { gap: 38px; }
+  .hero-columns { gap: 38px; }
   .call-grid { grid-template-columns: repeat(2, 1fr); }
   .topic-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -205,9 +197,7 @@ h3 { font-size: 1.35rem; }
   .primary-nav a { padding: 13px 6px; font-size: 1rem; }
   .primary-nav .button { margin-top: 10px; }
   .hero { min-height: auto; padding-top: 135px; }
-  .hero-inner, .split-layout, .programme-layout, .selection-grid, .submit-panel { grid-template-columns: 1fr; }
-  .hero-visual { max-width: 600px; margin: 20px auto 0; }
-  .visual-card { transform: none; }
+  .hero-columns, .split-layout, .programme-layout, .selection-grid, .submit-panel { grid-template-columns: 1fr; }
   .split-layout, .programme-layout, .selection-grid, .submit-panel { gap: 45px; }
   .highlight-box { grid-template-columns: 1fr; }
   .submission-summary { grid-template-columns: 1fr; }
@@ -221,7 +211,7 @@ h3 { font-size: 1.35rem; }
   .container { width: min(calc(100% - 28px), var(--container)); }
   .section { padding: 82px 0; }
   .hero { padding: 122px 0 80px; }
-  h1 { font-size: clamp(2.65rem, 13vw, 4rem); }
+  h1 { font-size: clamp(2.05rem, 8.6vw, 2.6rem); }
   h2 { font-size: 2.25rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-meta { grid-template-columns: 1fr; }
