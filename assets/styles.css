@@ -167,6 +167,15 @@ h3 { font-size: 1.35rem; }
 .submit-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
 .text-link-light { margin-top: 4px; color: rgba(255,255,255,.78); text-align: center; font-size: .87rem; }
 .copy-status { min-height: 24px; margin: 0 !important; text-align: center; font-size: .82rem; }
+.submit-direct { margin: 2px 0 0; text-align: center; font-size: .87rem; }
+.submit-direct strong { color: var(--white); font-weight: 700; }
+.copy-address { margin-left: 6px; padding: 3px 12px; border: 1px solid rgba(255,255,255,.42); border-radius: 999px; background: transparent; color: var(--white); font: inherit; font-size: .76rem; cursor: pointer; }
+.copy-address:hover { background: rgba(255,255,255,.1); }
+.mailto-fallback { margin-top: 8px; padding: 16px 18px; border: 1px solid rgba(244,200,104,.5); border-radius: 14px; background: rgba(244,200,104,.1); }
+.mailto-fallback p { margin: 0 0 12px; font-size: .89rem; }
+.mailto-fallback strong { color: var(--gold); }
+.fallback-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.fallback-actions .button { padding: 10px 16px; font-size: .85rem; }
 
 .organiser-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 50px; }
 .organiser-card { display: grid; grid-template-columns: auto 1fr; gap: 22px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }

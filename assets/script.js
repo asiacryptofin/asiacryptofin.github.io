@@ -41,11 +41,34 @@
 
   const proposalTemplate = `AsiaCryptoFin 2026 - Talk Proposal\n\nTalk title:\n\nSpeaker name:\n\nAffiliation and role:\n\nPerspective (academic / industry / government / practitioner):\n\nAbstract (200-300 words):\n\nKey takeaway for the audience:\n\nShort biography (approximately 100 words):\n\nRelevant links (optional):\n\nAccessibility or scheduling notes (optional):`;
 
+  const submitTo = 'joseph.liu@monash.edu';
+  const submitCc = 'John.TszHonYuen@monash.edu';
+  const subject = encodeURIComponent('AsiaCryptoFin 2026 Talk Proposal');
+  const body = encodeURIComponent(proposalTemplate);
+
   const mailto = document.querySelector('[data-mailto]');
   if (mailto) {
-    const subject = encodeURIComponent('AsiaCryptoFin 2026 Talk Proposal');
-    const body = encodeURIComponent(proposalTemplate);
-    mailto.href = `mailto:joseph.liu@monash.edu?cc=John.TszHonYuen@monash.edu&subject=${subject}&body=${body}`;
+    mailto.href = `mailto:${submitTo}?cc=${submitCc}&subject=${subject}&body=${body}`;
+  }
+
+  const gmailCompose = document.querySelector('[data-gmail-compose]');
+  if (gmailCompose) {
+    gmailCompose.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${submitTo}&cc=${submitCc}&su=${subject}&body=${body}`;
+  }
+
+  const mailtoFallback = document.querySelector('[data-mailto-fallback]');
+  if (mailto && mailtoFallback) {
+    mailto.addEventListener('click', () => {
+      let clientOpened = false;
+      const markOpened = () => { clientOpened = true; };
+      window.addEventListener('blur', markOpened, { once: true });
+      document.addEventListener('visibilitychange', markOpened, { once: true });
+      setTimeout(() => {
+        window.removeEventListener('blur', markOpened);
+        document.removeEventListener('visibilitychange', markOpened);
+        if (!clientOpened && !document.hidden) mailtoFallback.hidden = false;
+      }, 1600);
+    });
   }
 
   const copyButton = document.querySelector('[data-copy-template]');
@@ -77,5 +100,24 @@
     copyStatus.textContent = copied
       ? 'Proposal template copied to your clipboard.'
       : 'Copying was blocked by the browser. Please use the downloadable template.';
+  });
+
+  document.querySelectorAll('[data-copy-email]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const addresses = `${submitTo}, ${submitCc}`;
+      let copied = false;
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(addresses);
+          copied = true;
+        }
+      } catch (error) {
+        copied = fallbackCopy(addresses);
+      }
+      if (!copied) copied = fallbackCopy(addresses);
+      const original = button.textContent;
+      button.textContent = copied ? 'Copied ✓' : 'Copy blocked';
+      setTimeout(() => { button.textContent = original; }, 1800);
+    });
   });
 })();
