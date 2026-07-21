@@ -1,19 +1,37 @@
+=====================================================
 AsiaCryptoFin 2026 - Talk Proposal
+ASIACRYPT Industry Forum on Cryptography and Finance
+=====================================================
 
-Talk title:
+1) Talk title:
 
-Speaker name:
 
-Affiliation and role:
+2) Speaker name:
 
-Perspective (academic / industry / government / practitioner):
 
-Abstract (200-300 words):
+3) Affiliation and role:
 
-Key takeaway for the audience:
 
-Short biography (approximately 100 words):
+4) Perspective (academic / industry / government / practitioner):
 
-Relevant links (optional):
 
-Accessibility or scheduling notes (optional):
+5) Abstract (200-300 words):
+
+
+6) Key takeaway for the audience:
+
+
+7) Short biography (approx. 100 words):
+
+
+8) Relevant links (optional):
+
+
+9) Accessibility or scheduling notes (optional):
+
+
+-----------------------------------------------------
+Send to:  joseph.liu@monash.edu
+Cc:       John.TszHonYuen@monash.edu
+Deadline: 01 October 2026
+=====================================================

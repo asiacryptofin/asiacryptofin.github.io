@@ -39,12 +39,48 @@
     revealItems.forEach(item => item.classList.add('is-visible'));
   }
 
-  const proposalTemplate = `AsiaCryptoFin 2026 - Talk Proposal\n\nTalk title:\n\nSpeaker name:\n\nAffiliation and role:\n\nPerspective (academic / industry / government / practitioner):\n\nAbstract (200-300 words):\n\nKey takeaway for the audience:\n\nShort biography (approximately 100 words):\n\nRelevant links (optional):\n\nAccessibility or scheduling notes (optional):`;
+  const proposalTemplate = `=====================================================
+AsiaCryptoFin 2026 - Talk Proposal
+ASIACRYPT Industry Forum on Cryptography and Finance
+=====================================================
+
+1) Talk title:
+
+
+2) Speaker name:
+
+
+3) Affiliation and role:
+
+
+4) Perspective (academic / industry / government / practitioner):
+
+
+5) Abstract (200-300 words):
+
+
+6) Key takeaway for the audience:
+
+
+7) Short biography (approx. 100 words):
+
+
+8) Relevant links (optional):
+
+
+9) Accessibility or scheduling notes (optional):
+
+
+-----------------------------------------------------
+Send to:  joseph.liu@monash.edu
+Cc:       John.TszHonYuen@monash.edu
+Deadline: 01 October 2026
+=====================================================`;
 
   const submitTo = 'joseph.liu@monash.edu';
   const submitCc = 'John.TszHonYuen@monash.edu';
   const subject = encodeURIComponent('AsiaCryptoFin 2026 Talk Proposal');
-  const body = encodeURIComponent(proposalTemplate);
+  const body = encodeURIComponent(proposalTemplate.replace(/\n/g, '\r\n'));
 
   const mailto = document.querySelector('[data-mailto]');
   if (mailto) {
