@@ -77,12 +77,12 @@ button { cursor: pointer; }
 .hero-orb-one { width: 390px; height: 390px; right: -90px; top: 95px; background: radial-gradient(circle, rgba(89,228,206,.23), rgba(89,228,206,0) 70%); }
 .hero-orb-two { width: 470px; height: 470px; left: 28%; bottom: -270px; background: radial-gradient(circle, rgba(244,200,104,.13), rgba(244,200,104,0) 70%); }
 .hero-inner { position: relative; }
-.eyebrow { margin: 0 0 19px; color: var(--teal); font-size: .77rem; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+.eyebrow { margin: 0 0 19px; color: var(--teal); font-size: clamp(.8rem, .95vw, .95rem); font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow-dark { color: var(--teal-dark); }
 h1, h2, h3, h4 { margin-top: 0; line-height: 1.12; letter-spacing: -.035em; }
 h1 { margin-bottom: 18px; font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 800; }
 h1 span { color: var(--gold); }
-h2 { margin-bottom: 23px; font-size: clamp(2.15rem, 3.65vw, 3.55rem); font-weight: 790; }
+h2 { margin-bottom: 23px; font-size: clamp(2.05rem, 3.2vw, 3.1rem); font-weight: 790; }
 h3 { font-size: 1.35rem; }
 .hero-lead { max-width: 720px; margin: 0; color: rgba(255,255,255,.76); font-size: 1.17rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: clamp(16px, 2vh, 24px); }
