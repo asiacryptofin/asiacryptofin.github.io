@@ -148,6 +148,12 @@ h3 { font-size: 1.35rem; }
 .topics-note { margin-top: 24px; color: var(--muted); font-style: italic; }
 
 .programme-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: start; }
+.programme-venue { display: flex; align-items: center; gap: 16px; margin-top: 30px; padding: 20px 24px; border-left: 4px solid var(--gold); background: var(--white); box-shadow: 0 15px 38px rgba(8, 28, 49, .07); }
+.programme-venue .meta-icon { width: 26px; height: 26px; color: var(--teal-dark); }
+.programme-venue p { margin: 0; }
+.programme-venue span, .programme-venue strong { display: block; }
+.programme-venue span { color: var(--teal-dark); font-size: .73rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.programme-venue strong { color: var(--navy-900); font-size: 1.15rem; line-height: 1.35; }
 .programme-list { margin: 0; padding: 0; list-style: none; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
 .programme-list li { display: flex; gap: 24px; align-items: baseline; padding: 20px 26px; border-bottom: 1px solid var(--line); }
 .programme-list li:last-child { border-bottom: 0; }
