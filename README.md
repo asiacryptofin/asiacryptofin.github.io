@@ -16,16 +16,15 @@ Then visit `http://localhost:8000`.
 
 The folder can be uploaded directly to a standard web host, GitHub Pages, Netlify, Cloudflare Pages, or an institutional web server. No build step is required.
 
-## Items to update when confirmed
+## Key dates
 
-Search `index.html` for **To be announced** and update:
+All dates are confirmed and shown in `index.html`:
 
-1. Talk proposal deadline
-2. Speaker notification date
-3. Final talk information date
-4. Exact affiliated-event date and venue
+1. Talk proposal deadline: 01 October 2026
+2. Speaker notification: 15 October 2026
+3. Forum: 7 December 2026, 9am-2pm
 
-The parent ASIACRYPT dates are shown as 7-11 December 2026 in Hong Kong. The forum's exact one-day date remains clearly marked as unconfirmed.
+The parent ASIACRYPT dates are shown as 7-11 December 2026 in Hong Kong.
 
 ## Submission workflow
 

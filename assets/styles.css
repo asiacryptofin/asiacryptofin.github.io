@@ -148,19 +148,34 @@ h3 { font-size: 1.35rem; }
 .topics-note { margin-top: 24px; color: var(--muted); font-style: italic; }
 
 .programme-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: start; }
-.programme-list { margin: 0; padding: 0; list-style: none; }
-.programme-list li { display: flex; gap: 24px; align-items: center; padding: 23px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
-.programme-list > li:first-child { padding-top: 0; }
-.programme-list li > span { color: var(--teal); font-size: .73rem; font-weight: 900; letter-spacing: .08em; }
-.programme-list strong, .programme-list small { display: block; }
-.programme-list strong { font-size: 1.03rem; }
-.programme-list small { margin-top: 3px; color: rgba(255,255,255,.52); }
+.programme-list { margin: 0; padding: 0; list-style: none; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+.programme-list li { display: flex; gap: 24px; align-items: baseline; padding: 20px 26px; border-bottom: 1px solid var(--line); }
+.programme-list li:last-child { border-bottom: 0; }
+.programme-list .programme-break { background: #eef4f4; }
+.programme-list li > span { flex: 0 0 auto; color: var(--teal-dark); font-size: .86rem; font-weight: 900; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+.programme-list em, .programme-list strong, .programme-list small { display: block; }
+.programme-list em { margin-bottom: 3px; color: var(--teal-dark); font-size: .68rem; font-style: normal; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.programme-list strong { color: var(--navy-900); font-size: 1.03rem; line-height: 1.35; }
+.programme-list small { margin-top: 3px; color: var(--muted); font-size: .9rem; }
+.programme-list a { color: var(--teal-dark); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+.keynote-list { display: grid; gap: 24px; margin-top: 50px; }
+.keynote-card { display: grid; grid-template-columns: 168px 1fr; gap: 36px; align-items: start; padding: 34px; border: 1px solid rgba(255,255,255,.13); border-radius: var(--radius); background: rgba(255,255,255,.045); scroll-margin-top: 104px; }
+.keynote-photo { aspect-ratio: 1; overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 18px; background: rgba(255,255,255,.06); }
+.keynote-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+.keynote-label { margin: 0 0 8px; color: var(--gold); font-size: .73rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.keynote-card h3 { margin-bottom: 18px; font-size: 1.6rem; }
+.keynote-talk { margin: 0 0 20px; padding: 13px 18px; border-left: 3px solid var(--gold); background: rgba(255,255,255,.05); font-weight: 700; line-height: 1.4; }
+.keynote-talk span { display: block; margin-bottom: 3px; color: var(--teal); font-size: .68rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.keynote-bio p { margin: 0 0 12px; color: rgba(255,255,255,.7); font-size: .95rem; }
+.keynote-bio p:last-child { margin-bottom: 0; }
 
 .selection-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 80px; align-items: center; }
 .timeline-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
 .timeline-card > div { display: flex; justify-content: space-between; gap: 30px; padding: 22px 26px; border-bottom: 1px solid var(--line); }
 .timeline-card span { color: var(--muted); }
 .timeline-card strong { color: var(--navy-900); text-align: right; }
+.timeline-card a { color: var(--teal-dark); text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .timeline-card p { margin: 0; padding: 20px 26px; color: var(--muted); background: #eef4f4; font-size: .88rem; }
 
 .section-submit { padding: 75px 0; background: var(--paper); }
@@ -252,6 +267,9 @@ h3 { font-size: 1.35rem; }
   .timeline-card > div { flex-direction: column; gap: 5px; }
   .timeline-card strong { text-align: left; }
   .organiser-card { grid-template-columns: 1fr; }
+  .keynote-card { grid-template-columns: 1fr; gap: 22px; padding: 24px; }
+  .keynote-photo { width: 128px; }
+  .programme-list li { gap: 16px; padding: 18px 18px; }
   .footer-grid { grid-template-columns: 1fr; gap: 34px; }
   .footer-grid > div:first-child { grid-column: auto; }
   .footer-bottom { flex-direction: column; }
