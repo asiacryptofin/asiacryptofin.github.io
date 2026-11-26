@@ -174,7 +174,8 @@ h3 { font-size: 1.35rem; }
 .keynote-affiliation { margin: 0 0 18px; color: rgba(255,255,255,.72); font-size: 1rem; font-weight: 600; }
 .keynote-talk { margin: 0 0 20px; padding: 13px 18px; border-left: 3px solid var(--gold); background: rgba(255,255,255,.05); font-weight: 700; line-height: 1.4; }
 .keynote-talk span { display: block; margin-bottom: 3px; color: var(--teal); font-size: .68rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
-.keynote-bio p { margin: 0 0 12px; color: rgba(255,255,255,.7); font-size: .95rem; }
+.keynote-abstract { margin-bottom: 20px; }
+.keynote-abstract p, .keynote-bio p { margin: 0 0 12px; color: rgba(255,255,255,.7); font-size: .95rem; }
 .keynote-bio p:last-child { margin-bottom: 0; }
 
 .selection-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 80px; align-items: center; }
